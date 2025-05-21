@@ -2,6 +2,10 @@
 
 ![Overview Animation](generated/overview.svg)
 
+![Overview Animation](generated/3089464667__default-app_status.svg)
+
+![Overview Animation](generated/languages.svg)
+
 ## 项目简介
  
 **GitHub Repo Activity Tracker** 能够自动统计和可视化你的 GitHub 仓库活跃度和贡献数据，并以 SVG 动态图片的形式展示。
