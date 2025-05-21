@@ -33,6 +33,7 @@ def load_repo_stats():
 
 
 def save_repo_stats(data):
+    generate_output_folder()
     with open(REPO_STATS_PATH, "w") as f:
         json.dump(data, f, indent=2)
 
