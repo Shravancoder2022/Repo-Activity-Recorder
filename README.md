@@ -3,8 +3,7 @@
 ![Overview Animation](generated/overview.svg)
 
 ## 项目简介
-
-本项目基于 [jstrieb/github-stats](https://github.com/jstrieb/github-stats)，遵循 GNU GPL v3 协议。  
+ 
 **GitHub Repo Activity Tracker** 能够自动统计和可视化你的 GitHub 仓库活跃度和贡献数据，并以 SVG 动态图片的形式展示。
 
 ---

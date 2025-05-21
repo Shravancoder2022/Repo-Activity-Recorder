@@ -142,30 +142,28 @@ async def generate_repo_image(repo: str, stats: dict):
 async def update_and_generate_repo_stats(s: Stats):
     repo_stats = load_repo_stats()
     today = today_str()
-    is_first_run = not repo_stats
-
+    # 标记首次运行（repo_stats为空）或首次统计某个repo
     for repo in await s.repos:
         repo = str(repo)
         if repo not in repo_stats:
             repo_stats[repo] = {"stars": 0, "clones": 0, "views": 0, "history": {}}
+            is_first = True
+        else:
+            is_first = False
         stats = repo_stats[repo]
-        if is_first_run:
-            stars = await fetch_repo_stars(s, repo)
-            clones, views = await fetch_repo_traffic(s, repo)
+        stars = await fetch_repo_stars(s, repo)
+        clones, views = await fetch_repo_traffic(s, repo)
+        if is_first:
+            # 首次统计，直接记录当前总量
             stats["stars"] = stars
             stats["clones"] = clones
             stats["views"] = views
             stats["history"][today] = {"stars": stars, "clones": clones, "views": views}
         else:
-            # 每天累加当天的star、clone、view
-            stars = await fetch_repo_stars(s, repo)
-            clones, views = await fetch_repo_traffic(s, repo)
-            prev_stars = stats.get("stars", 0)
-            prev_clones = stats.get("clones", 0)
-            prev_views = stats.get("views", 0)
-            delta_stars = max(0, stars - prev_stars)
-            delta_clones = max(0, clones - prev_clones)
-            delta_views = max(0, views - prev_views)
+            # 后续累加增量
+            delta_stars = max(0, stars - stats.get("last_stars", stats["stars"]))
+            delta_clones = max(0, clones - stats.get("last_clones", stats["clones"]))
+            delta_views = max(0, views - stats.get("last_views", stats["views"]))
             stats["stars"] += delta_stars
             stats["clones"] += delta_clones
             stats["views"] += delta_views
@@ -174,6 +172,10 @@ async def update_and_generate_repo_stats(s: Stats):
                 "clones": delta_clones,
                 "views": delta_views,
             }
+        # 记录本次的原始值，便于下次累加
+        stats["last_stars"] = stars
+        stats["last_clones"] = clones
+        stats["last_views"] = views
         await generate_repo_image(repo, stats)
     save_repo_stats(repo_stats)
 
