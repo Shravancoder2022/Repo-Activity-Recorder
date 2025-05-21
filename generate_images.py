@@ -124,8 +124,10 @@ def today_str():
 
 
 async def generate_repo_image(repo: str, stats: dict):
-    # 读取模板
-    with open("templates/repo_status.svg", "r") as f:
+    template_path = "templates/repo_status.svg"
+    if not os.path.exists(template_path):
+        raise FileNotFoundError(f"SVG template not found: {template_path}")
+    with open(template_path, "r") as f:
         output = f.read()
     output = output.replace("{{ repo }}", repo)
     output = output.replace("{{ stars }}", str(stats.get("stars", 0)))
