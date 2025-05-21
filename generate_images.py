@@ -142,8 +142,12 @@ async def generate_repo_image(repo: str, stats: dict):
 async def update_and_generate_repo_stats(s: Stats):
     repo_stats = load_repo_stats()
     today = today_str()
-    # 标记首次运行（repo_stats为空）或首次统计某个repo
-    for repo in await s.repos:
+    # 调试输出
+    all_repos = await s.repos
+    print("All repos to be processed:", all_repos)
+    if not all_repos:
+        print("No repositories found for the user. Please check ACCESS_TOKEN permissions and EXCLUDED settings.")
+    for repo in all_repos:
         repo = str(repo)
         if repo not in repo_stats:
             repo_stats[repo] = {"stars": 0, "clones": 0, "views": 0, "history": {}}
@@ -154,13 +158,11 @@ async def update_and_generate_repo_stats(s: Stats):
         stars = await fetch_repo_stars(s, repo)
         clones, views = await fetch_repo_traffic(s, repo)
         if is_first:
-            # 首次统计，直接记录当前总量
             stats["stars"] = stars
             stats["clones"] = clones
             stats["views"] = views
             stats["history"][today] = {"stars": stars, "clones": clones, "views": views}
         else:
-            # 后续累加增量
             delta_stars = max(0, stars - stats.get("last_stars", stats["stars"]))
             delta_clones = max(0, clones - stats.get("last_clones", stats["clones"]))
             delta_views = max(0, views - stats.get("last_views", stats["views"]))
@@ -172,7 +174,6 @@ async def update_and_generate_repo_stats(s: Stats):
                 "clones": delta_clones,
                 "views": delta_views,
             }
-        # 记录本次的原始值，便于下次累加
         stats["last_stars"] = stars
         stats["last_clones"] = clones
         stats["last_views"] = views
@@ -219,6 +220,9 @@ async def main() -> None:
             exclude_langs=excluded_langs,
             ignore_forked_repos=ignore_forked_repos,
         )
+        repos = await s.repos
+        print("实际统计的仓库数量:", len(repos))
+        print("实际统计的仓库:", repos)
         await asyncio.gather(
             generate_languages(s),
             generate_overview(s),
