@@ -1,10 +1,10 @@
 # GitHub Repo Activity Tracker
 
-![Overview Animation](generated/overview.svg)
+![Animation](generated/overview.svg)
 
-![Overview Animation](generated/3089464667__default-app_status.svg)
+![Animation](generated/3089464667__default-app_status.svg)
 
-![Overview Animation](generated/languages.svg)
+![Animation](generated/languages.svg)
 
 ## 项目简介
  
@@ -40,7 +40,7 @@
    - 所有统计数据每日自动累加并保存在 `generated/repo_stats.json`，保证数据不会丢失。
 
 5. **自动化与定时更新**
-   - 支持 GitHub Actions 自动化，每天定时（UTC 00:05）自动统计并更新所有图片和数据。
+   - 支持 GitHub Actions 自动化，每天定时（UTC 00:05）北京时间08:05自动统计并更新所有图片和数据。
    - 支持手动触发 workflow，首次运行时自动初始化所有仓库的统计数据。
 
 6. **自定义统计范围**
@@ -70,6 +70,12 @@
    ![](generated/languages.svg)
    ![](generated/your_repo_name_status.svg)
    ```
+5. **在其他仓库（或者主页仓库）的README 中插入如下内容展示统计动图：**
+   ```markdown
+   ![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/overview.svg)
+![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/languages.svg)
+![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/<repo>_status.svg)
+   ```
 
 ---
 
@@ -82,4 +88,4 @@
 ---
 
 # 声明和许可证
-本项目基于 [jstrieb/github-stats](https://github.com/jstrieb/github-stats)，遵循 GNU GPL v3 协议。
+本项目基于 [jstrieb/github-stats](https://github.com/jstrieb/github-stats)二次开发，新增功能：展示每个仓库的总star数、clone数和view 数（从第一次在 Actions 页面，手动运行 “Generate Stats Images” workflow 开始，记录的每个仓库的总star数、clone数和view 数），遵循 GNU GPL v3 协议。
