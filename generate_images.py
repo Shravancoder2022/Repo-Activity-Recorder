@@ -10,6 +10,7 @@ import aiohttp
 
 from github_stats import Stats
 
+REPO_STATS_PATH = "generated/repo_stats.json"
 
 ################################################################################
 # Helper Functions
