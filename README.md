@@ -1,4 +1,4 @@
-# GitHub Repo Activity Tracker
+# GitHub Repo Activity Recorder
 
 ![Animation](generated/overview.svg)
 
@@ -8,7 +8,7 @@
 
 ## 项目简介
  
-**GitHub Repo Activity Tracker** 能够自动统计和可视化你的 GitHub 仓库活跃度和贡献数据，并以 SVG 动态图片的形式展示。
+**GitHub Repo Activity Recorder** 能够自动统计和可视化你的 GitHub 仓库活跃度和贡献数据，并以 SVG 动态图片的形式展示。
 
 ---
 
