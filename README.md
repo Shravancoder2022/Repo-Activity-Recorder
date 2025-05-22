@@ -76,6 +76,7 @@
 ![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/languages.svg)
 ![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/<repo>_status.svg)
    ```
+如果你喜欢，请给仓库一个star
 
 ---
 
