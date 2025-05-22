@@ -54,8 +54,8 @@
 
 ## 使用方法
 
-1. **Fork 本仓库或创建新仓库，并配置 GitHub Actions Secrets：**
-   - `ACCESS_TOKEN`：你的 GitHub Personal Access Token（需 `repo` 权限）
+1. **点击use this template按钮创建新仓库，并配置 GitHub Actions Secrets：**
+   - （必选）`ACCESS_TOKEN`：你的 GitHub Personal Access Token（需 `repo` 权限）
    - （可选）`EXCLUDED`：排除的仓库名，逗号分隔
    - （可选）`EXCLUDED_LANGS`：排除的语言，逗号分隔
    - （可选）`EXCLUDE_FORKED_REPOS`：如需排除 fork 仓库，设置为 `true`
@@ -64,13 +64,13 @@
 
 3. **每天自动定时统计并更新所有图片和数据，无需人工干预。**
 
-4. **在你的 README 中插入如下内容展示统计动图：**
+4. **在你的模板仓库README 中插入如下内容展示统计动图：**
    ```markdown
    ![](generated/overview.svg)
    ![](generated/languages.svg)
    ![](generated/your_repo_name_status.svg)
    ```
-5. **在其他仓库（或者主页仓库）的README 中插入如下内容展示统计动图：**
+5. **在你的其他仓库（或者主页仓库）的README 中插入如下内容展示统计动图：**
    ```markdown
    ![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/overview.svg)
 ![](https://raw.githubusercontent.com/<你的用户名>/<你的统计仓库名>/main/generated/languages.svg)
