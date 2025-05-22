@@ -88,4 +88,5 @@
 ---
 
 # 声明和许可证
-本项目基于 [jstrieb/github-stats](https://github.com/jstrieb/github-stats)二次开发，新增功能：展示每个仓库的总star数、clone数和view 数（从第一次在 Actions 页面，手动运行 “Generate Stats Images” workflow 开始，记录的每个仓库的总star数、clone数和view 数），遵循 GNU GPL v3 协议。
+本项目基于
+[jstrieb/github-stats](https://github.com/jstrieb/github-stats)二次开发，新增功能：展示每个仓库的总star数、clone数和view 数（从第一次在 Actions 页面，手动运行 “Generate Stats Images” workflow 开始，记录的每个仓库的总star数、clone数和view 数），遵循 GNU GPL v3 协议。
